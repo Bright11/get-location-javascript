@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>get user locaton</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script language="JavaScript" src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    <body>
+        <a href="index.html">Index</a>
+        <br>
+        <a href="language_translate.html">Language</a>
+        <br>
+        First Input : <input type='text' id='txtFirst' class='copyText' /><br/>
+        Second Input : <input type='text' id='txtSecond' class='copyText' /><br/>
+        Third Input : <input type='text' id='txtThird' class='copyText' /><br/>
+
+       <script>
+        $(document).ready(function(){
+            $('.copyText').on('keyup change paste', function(e){
+                $('.copyText').val($(this).val())
+            });
+        });
+       </script>
+    </body>
+</html>

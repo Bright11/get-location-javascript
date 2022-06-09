@@ -5,19 +5,39 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script language="JavaScript" src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     </head>
     <body>
-        <h1 id="c"></h1>
+        <a href="multy_type.html">multy type</a>
+        <br>
+        <a href="javascript_slug.html">Slug</a>
+        <br>
+       
+        <br>
+        <h1 id="ip"></h1>
+        <br>
+        <h1 id="country"></h1>
+        <br>
+        <h1 id="country_code"></h1>
+        <br>
+        <h1 id="state"></h1>
         <br>
         <h1 id="city"></h1>
         <br>
-        <h1 id="rname"></h1>
-<div class="form-group">
-  <label for=""></label>
-  <input type="text "
-    class="form-control" name="" id="mycountry" aria-describedby="helpId" value="">
-  <small id="helpId" class="form-text text-muted">Help text</small>
-</div>
+        <h1 id="ontinet_code"></h1>
+        <br>
+        <h1 id="timezone"></h1>
+        <br>
+        <h1 id="currency_code"></h1><br>
+        <h1 id="currency_code"></h1><br>
+        <h1 id="currency_symbol"></h1><br>
+
+        <input type="text" id="lontitude"><br>
+        <input type="text" id="latitude"><br>
+        <input type="text" id="currency_converter"><br>
+       
+
+
 
 <script>
     console.log("IP: ",geoplugin_request())
@@ -35,11 +55,37 @@
     console.log('1 USD=',geoplugin_currencyConverter(100, false))
     //console.log('ContinetName:',geoplugin_continentName())
 
+   var $ip=("IP: ",geoplugin_request())
+    var $country=('Country:',geoplugin_countryName())
+   var $country_code=('Country Code:',geoplugin_countryCode())
+   var $state=('State:',geoplugin_regionName())
+    var $state_code=('State Code:',geoplugin_regionCode())
+   var $city=('City:',geoplugin_city())
+    var $ontinet_code=('Continet Code:',geoplugin_continentCode())
+    var $timezone=('Timezone:',geoplugin_timezone())
+    var $currency_code=('Currency Code:',geoplugin_currencyCode())
+    var $currency_symbol=('Currency Symbol:',geoplugin_currencySymbol_UTF8())
+    var $lontitude=('Longitude:',geoplugin_longitude())
+    var $latitude=('Latitude:',geoplugin_latitude())
+    var $currency_converter=('1 USD=',geoplugin_currencyConverter(100, false))
+
    // var $rn=('rc:',geoplugin_countryName())
 
 
-    //document.getElementById('c').innerHTML=$country;
-    //document.getElementById('rname').innerHTML=$rn;
+    document.getElementById('ip').innerHTML=$ip
+    document.getElementById('country').innerHTML=$country;
+    document.getElementById('country_code').innerHTML=$country_code;
+    document.getElementById('state').innerHTML=$state;
+    document.getElementById('ontinet_code').innerHTML=$ontinet_code;
+    document.getElementById('timezone').innerHTML=$timezone;
+    document.getElementById('currency_code').innerHTML=$currency_code;
+
+    document.getElementById('currency_symbol').innerHTML=$currency_symbol;
+    document.getElementById('city').innerHTML=$city;
+    document.getElementById('lontitude').value=$lontitude;
+    document.getElementById('latitude').value=$latitude;
+
+    document.getElementById('currency_converter').value=$currency_converter;
    
 
 </script>
